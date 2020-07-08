@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DHL Goldcard Generator - By DigitalDivide</title>
+  <script src="https://cdn.jsdelivr.net/jsbarcode/3.5.1/JsBarcode.all.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body onload="generateNewCode();">
+  <div id="container">
+    <div id="gc1">
+      <input type="text" id="postnummer" name="postnummer" maxlength="9" value="71534875" onkeyup="this.value=this.value.replace(/[^\d]/,'');generateNewCode()"><br>
+    </div>
+    <div id="gc2">
+      <a id="imageLink" target="_blank">
+        <img id="image"></img>
+        </a>
+        <span id="newCode"></span>
+    </div>
+    <div class=faq>
+      <ul>
+        <li>Postnummer 7-9 Stellen lang</li>
+        <li>Alte Packstationen ohne Barcodescanner 3x oben links auf DHL Zeichen tippen und Postnummer manuell eingeben</li>
+        <li>Warum Barcode? Anstatt Magnetstreifen der Goldcard kann man auch nur den Barcode einlesen</li>
+        <li>Goldcard wird also nicht mehr benötigt und man braucht nur den Barcode als Bild auf dem Handy</li>
+      </ul>
+  </div>
+  <canvas id="barcode"></canvas><br>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
